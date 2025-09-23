@@ -1,0 +1,43 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+
+# Paquetes instalados localmente
+pip-wheel-metadata/
+
+
+# Datos / outputs grandes (por defecto ignoramos CSV/XLSX pero permitimos los ejemplos en /data)
+*.csv
+*.xlsx
+
+
+# Permitimos archivos pequeños dentro de la carpeta data (quita la negación si quieres ignorarlos también)
+!data/
+
+
+# Editor / IDE
+.vscode/
+.idea/
+
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+
+# Otros temporales
+*.log
+*.tmp
+
+
+# Notebook checkpoints
+.ipynb_checkpoints/
