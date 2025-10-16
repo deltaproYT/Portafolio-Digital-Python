@@ -4,7 +4,7 @@ import numpy as np
 choice = None #Declaro Variables
 
 print('Bienvenido a la Calculadora de Sistemas de Ecuaciones 3x3')
-def choices1():
+def choices1(): #Realiza un bucle donde permite escoger entre 3 valores, para evitar una irrupcion en el codigo se aplica un try-except dentro del bucle donde evalua la excepcion "ValueError" haciendo que sea imposible la continuacion del codigo ingresando un valor incorrecto
     while True:
         try:
             print(f'Salir | 1\n2 Variables | 2\n3 Variables | 3')
@@ -14,7 +14,7 @@ def choices1():
             print('Por favor, escoga un valor en la lista de variables')
 
 
-def choices2(ch2):
+def choices2(ch2): 
 
     if ch2 == 1:
         print('Salio Exitosamente del programa, Su eleccion fue 1')
