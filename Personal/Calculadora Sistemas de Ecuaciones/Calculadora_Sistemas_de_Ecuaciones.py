@@ -1,8 +1,16 @@
 import numpy as np
 import time
 
-            
-choice = None #Declaro Variables
+#Declaro Variables
+choice = None 
+a = None
+b = None
+c = None
+d = None
+dtg = None
+dtx = None
+dty = None
+dtz = None
 
 print('Bienvenido a la Calculadora de Sistemas de Ecuaciones 3x3')
 time.sleep(1)
@@ -41,7 +49,7 @@ def selection(ch2):
     return ch2
 #########################################################################################################################################################################################################################################################################################################################################################################################
 
-def matrixeq():
+def cramereqs2x2(a,b,c):
     
 
 
