@@ -1,4 +1,3 @@
-import numpy as np
 import time
 
 #Declaro Variables
@@ -31,9 +30,10 @@ def cramereqs2x2(a1,b1,c1,a2,b2,c2):
         dtg = (a1 * b2) - (a2 * b1)    
         dtx = (c1 * b2) - (c2 * b1)		
         dty = (a1 * c2) - (a2 * c1)
-        x = dtx / dtg
-        y = dty / dtg
-        print(f'Los resultados son\nX = {x}\nY = {y}')
+        var = []
+        var.append(dtx / dtg)
+        var.append(dty / dtg)
+        print(f'Los resultados son\nX = {var[1]}\nY = {var[0]}')
     except ZeroDivisionError:
         print('¡ECUACIÓN INVALIDA! No es posible la división entre cero')
     finally:
@@ -51,11 +51,11 @@ def cramereq3x3(a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3):
         dty = ((a1 * d2 * c3) + (a2 * d3* c1) + (a3 * d1 * c2)) - ((c1 * d2 * a3)+(c2 * d3 * a1)+(c3 * d1 * a2))
 
         dtz = ((a1 * b2 * d3) + (a2 * b3* d1) + (a3 * b1 * d2)) - ((d1 * b2 * a3)+(d2 * b3 * a1)+(d3 * b1 * a2))
-
-        x = dtx / dtg
-        y = dty / dtg
-        z = dtz / dtg
-        print(f'Los resultados son\nX = {x}\nY = {y}\nZ = {z}')
+        var = []
+        var.append(dtx / dtg)
+        var.append(dty / dtg)
+        var.append(dtz / dtg)
+        print(f'Los resultados son\nX = {var[2]}\nY = {var[1]}\nZ = {var[0]}')
     except ZeroDivisionError:
         print('¡ECUACIÓN INVALIDA! No es posible la división entre cero')
     finally:
@@ -100,7 +100,8 @@ def choices1(): #Realiza un bucle donde permite escoger entre 3 valores, para ev
 #########################################################################################################################################################################################################################################################################################################################################################################################
 #########################################################################################################################################################################################################################################################################################################################################################################################
 
-
+def roundnum():
+    return None
 
 #########################################################################################################################################################################################################################################################################################################################################################################################
 #########################################################################################################################################################################################################################################################################################################################################################################################
@@ -129,22 +130,26 @@ def selection1(ch2):
             break
 
         elif ch2 == 3:
-            print(f'Salir | 1\n2 Metodo Cramer | 2\n3 Gauss Jordan | 3')
-            choices1()
+            print(f'Salir | 1\nMetodo Cramer | 2\nGauss Jordan | 3')
             if choices1() == 2:
                 while True:
                     try:
                         a1 = int(input('Ingrese el valor de a1: '))
                         b1 = int(input('Ingrese el valor de b1: '))
-                        c1 = int(input('Ingrese el valor del termino independiente 1: '))
+                        c1 = int(input('Ingrese el valor de c1: '))
+                        d1 = int(input('Ingrese el valor del termino independiente 1: '))
                         a2 = int(input('Ingrese el valor de a2: '))
                         b2 = int(input('Ingrese el valor de b2: '))
-                        c2 = int(input('Ingrese el valor del termino independiente 2: '))
+                        c2 = int(input('Ingrese el valor de c2: '))
+                        d2 = int(input('Ingrese el valor del termino independiente 2: '))
+                        a3 = int(input('Ingrese el valor de a3: '))
+                        b3 = int(input('Ingrese el valor de b3: '))
+                        c3 = int(input('Ingrese el valor de c3: '))
+                        d3 = int(input('Ingrese el valor del termino independiente 3: '))
                         break
                     except ValueError:
                         print('Por favor, ingrese un valor valido')
-                    cramereq3x3()
-                    break
+                cramereq3x3(a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3)
             break
 
         else:
