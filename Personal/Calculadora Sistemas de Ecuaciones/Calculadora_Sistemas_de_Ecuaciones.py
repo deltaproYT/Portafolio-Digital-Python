@@ -34,7 +34,8 @@ def cramereqs2x2(a1,b1,c1,a2,b2,c2):
         
     except ZeroDivisionError:
         print('¡ECUACIÓN INVALIDA! No es posible la división entre cero')
-    print('Gracias por usar la calculadora!!!\nSystem Shutting Down...')
+    finally:
+        print('Gracias por usar la calculadora!!!\nSystem Shutting Down...')
 
 #########################################################################################################################################################################################################################################################################################################################################################################################
 
