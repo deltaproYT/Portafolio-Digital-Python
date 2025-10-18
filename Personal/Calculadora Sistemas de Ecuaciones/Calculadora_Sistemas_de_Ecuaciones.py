@@ -131,12 +131,26 @@ def selection1(ch2):
         elif ch2 == 3:
             print(f'Salir | 1\n2 Metodo Cramer | 2\n3 Gauss Jordan | 3')
             choices1()
-            cramereq3x3()
+            if choices1() == 2:
+                while True:
+                    try:
+                        a1 = int(input('Ingrese el valor de a1: '))
+                        b1 = int(input('Ingrese el valor de b1: '))
+                        c1 = int(input('Ingrese el valor del termino independiente 1: '))
+                        a2 = int(input('Ingrese el valor de a2: '))
+                        b2 = int(input('Ingrese el valor de b2: '))
+                        c2 = int(input('Ingrese el valor del termino independiente 2: '))
+                        break
+                    except ValueError:
+                        print('Por favor, ingrese un valor valido')
+                    cramereq3x3()
+                    break
             break
 
         else:
             print('Por favor, escoja un valor en la lista de variables: ')
             choices1()
+            ch2 = choices1()
     return ch2
 
 #########################################################################################################################################################################################################################################################################################################################################################################################
