@@ -1,3 +1,4 @@
+import sys
 '''
 Pide al usuario ingresar 10 números. 
 El algoritmo debe contar cuántos son positivos, cuántos negativos y cuántos son 
@@ -23,5 +24,8 @@ while True:
             break
     except ValueError:
         print('Por favor ingrese un valor valido')
+    except KeyboardInterrupt:
+        print('\nSystem shutting down...') 
+        sys.exit()
 
 print(f'Habian:\n{pos} numeros positivos\n{zer} ceros\n{neg} numeros negativos')

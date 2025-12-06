@@ -1,3 +1,4 @@
+import sys
 '''
 El usuario ingresa un número entero positivo. 
 El algoritmo debe encontrar su mayor divisor propio (distinto de él mismo) usando un ciclo REPETIR 
@@ -12,6 +13,9 @@ def data_entry():
             return num
         except ValueError:
             print('Por favor ingrese un valor valido')
+        except KeyboardInterrupt:
+            print('\nSystem shutting down...') 
+            sys.exit()
 
 div = num = data_entry()
 while True:

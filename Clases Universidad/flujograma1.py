@@ -1,3 +1,4 @@
+import sys
 '''
 Algoritmo SumaNumerosPositivos
  Definir num, suma Como Real
@@ -20,6 +21,9 @@ while True:
         break
     except ValueError:
         print('Por favor, ingrese un numero')
+    except KeyboardInterrupt:
+        print('\nSystem shutting down...') 
+        sys.exit()
 
 while num >= 0:
     try:
@@ -27,4 +31,7 @@ while num >= 0:
         num = float(input('Ingrese otro número (negativo para terminar):'))
     except ValueError:
         print('Por favor, ingrese un numero')
+    except KeyboardInterrupt:
+        print('\nSystem shutting down...') 
+        sys.exit()
 print(f'La suma total de los números ingresados es: {suma}')

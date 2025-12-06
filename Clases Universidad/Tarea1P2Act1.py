@@ -1,3 +1,4 @@
+import sys
 '''
 Pide al usuario ingresar números indefinidamente. 
 El proceso termina cuando se ingresa 0. 
@@ -32,9 +33,13 @@ while True:
             break
     except ValueError:
         print('Por favor ingrese un numero entero')
+    except KeyboardInterrupt:
+        print('\nSystem shutting down...') 
+        sys.exit()
 
 promn = prom(sumn, jmpn)
 promp = prom(sump, jmpp)
+
 
 print(f'El promedio de los numeros positivos es: {promp}')
 print(f'El promedio de los numeros negativos es: {promn}')
