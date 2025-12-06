@@ -33,8 +33,8 @@ while True:
     except ValueError:
         print('Por favor ingrese un numero entero')
 
-promp = prom(sumn, jmpn)
-promn = prom(sump, jmpp)
+promn = prom(sumn, jmpn)
+promp = prom(sump, jmpp)
 
 print(f'El promedio de los numeros positivos es: {promp}')
 print(f'El promedio de los numeros negativos es: {promn}')
