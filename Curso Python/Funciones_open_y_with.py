@@ -1,15 +1,14 @@
 file_name = 'Texto1.txt'
 
-text = open(file_name, 'w')
-for _ in range(10):
-    text.write(input('Escriba algo:') + '\n') 
-text.close()
+with open(file_name, 'w') as text:
+    for _ in range(10):
+        text.write(input('Escriba algo:') + '\n') 
 
 
-text = open(file_name, 'r')
-data = text.read()
-for i in data.split('\n'):
-    print(i)
+
+with open(file_name, 'r') as text:
+    data = text.read()
+    for i in data.split('\n'):
+        print(i)
 
     
-text.close()
