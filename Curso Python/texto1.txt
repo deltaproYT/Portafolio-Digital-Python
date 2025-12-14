@@ -1,0 +1,5 @@
+Hola Mundo
+Mi programador es Jordy Wladimir Ortiz Aquino
+Soy la primera prueba de una impresion fuera de la consola
+y creacion de archivo .txt
+Luego probaremos otros metodos e ideas nuevas
