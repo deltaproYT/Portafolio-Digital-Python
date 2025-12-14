@@ -12,6 +12,10 @@ def calcular_factorial(n):
         fact = fact * i
 
     return fact
+
+
+
+
 while True:
     try:
         num = int(input('Por favor, ingrese un numero entero: '))
