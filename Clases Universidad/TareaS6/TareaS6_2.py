@@ -8,11 +8,10 @@ n x i = resultado
 prod = float()
 
 def converttype(num):
-    strnum = str(num)
-    if '.' in strnum:
-        return float(num)
-    else:
+    if num.is_integer():
         return int(num)
+    else:
+        return num
 
 while True:
     try:
