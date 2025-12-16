@@ -30,13 +30,8 @@ class Functions():
     def saludo(first_name):
         return f'Hola {first_name} Como estas?'
 
-
 person_jordy = Person('Jordy','Ortiz','2450938722')
 employee_jordy = Employee('Jordy','Ortiz','2450938722', '750')
-
-
-
-
 
 print(person_jordy.full_info())
 print(Functions.saludo(person_jordy))
