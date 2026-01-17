@@ -82,3 +82,17 @@ weeks=n - n semanas
 #print(diferencia)
 #diferencia = siguiente_semana - actualidad
 #print(diferencia)
+
+#Ordenar por fecha
+'''Para ordenar por fecha usaremos una building function de python llamada sorted()'''
+#fechas = [
+#    datetime(2026, 7, 2).date(),
+#    datetime(2026, 6, 10).date(),
+#    datetime(2026, 2, 18).date()
+#]
+
+#sorted(fechas, reverse=True)
+
+#for i,j in enumerate(fechas):
+#    print(f'{i+1} - {j}')
+#print('\n')
