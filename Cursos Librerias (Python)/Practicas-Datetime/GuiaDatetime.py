@@ -91,7 +91,7 @@ weeks=n - n semanas
 #    datetime(2026, 6, 10).date()
 #]
 
-#sorted(fechas, reverse=True)
+#fechas = sorted(fechas, reverse=True)
 
 #for i,j in enumerate(fechas):
 #    print(f'{i+1} - {j}')
