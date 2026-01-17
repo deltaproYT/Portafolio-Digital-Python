@@ -87,8 +87,8 @@ weeks=n - n semanas
 '''Para ordenar por fecha usaremos una building function de python llamada sorted()'''
 #fechas = [
 #    datetime(2026, 7, 2).date(),
-#    datetime(2026, 6, 10).date(),
-#    datetime(2026, 2, 18).date()
+#    datetime(2026, 2, 18).date(),
+#    datetime(2026, 6, 10).date()
 #]
 
 #sorted(fechas, reverse=True)
