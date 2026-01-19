@@ -1,7 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from pathlib import Path
 
-df = pd.read_csv('Trabajos en Git/Proyectos Python (Git)/Practicas PANDAS/MiPrimerAnalisisDeDatos/ModalidadVirtual.csv')
+df = pd.read_csv(Path('C:/Users/Jordy/Visual Studio Code Principal/Repos/Python-Projects/Cursos Librerias (Python)/Practicas-PANDAS/MiPrimerAnalisisDeDatos/ModalidadVirtual.csv'))
 #print(df['carrera'][0])
 #print(df['carrera']=='Psicología')
 #filtro = df['sexo'] == 'Mujer'
