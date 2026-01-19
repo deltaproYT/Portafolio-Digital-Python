@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from datetime import datetime
 '''
 Un JSON (JavaScript Object Notation) es un formato ligero y legible por humanos 
 para el intercambio de datos, utilizado principalmente para la comunicación 
@@ -38,3 +39,21 @@ persona_json_string = json.loads('{"Nombre": "Jordy", "Apellido": "Ortiz", "Mayo
 
 for i in persona_json_string:
     print(f'{i} : {persona_json_string[i]}')
+
+
+#JSON serializer
+'''
+Hay tipos de datos no compatibles con JSON como los datetime o time
+para esos escenarios se realiza un serializador o serializer, en esta
+parte de la guia se expondra como hacer un serializador para datos tipo datetime
+'''
+
+fechas_json = {
+    'fecha1' : datetime(2007, 6, 10),
+    'fecha2' : datetime(2007, 7, 2),
+    'fecha3' : datetime(2025, 2, 18),
+    'fecha4' : datetime.now()
+}
+
+with open(Path('C:/Users/Jordy/Visual Studio Code Principal/Repos/Python-Projects/Cursos Librerias (Python)/Practicas JSON/JSON/fechas_json.json'), 'w') as file:
+    json.dump(fechas_json, file, default=lambda x : x.isoformat())
