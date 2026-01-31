@@ -1,13 +1,13 @@
-import cifrado_fun as cf
+import Cifrado_Cesar_fun as ccf
 
 # Input de datos
 lista = []
 palabra = str(input("Ingrese la palabra a cifrar: "))
-letra = list(palabra)
+letra = list(palabra.lower())
 
 # Creacion de lista de conversion de letra a numero posicional
 for i in range(len(letra)):
-    lista.append(cf.cifrado_posicional(letra[i]))
+    lista.append(ccf.Funciones.cifrado_posicional(letra[i]))
 
 # Proceso de eliminacion de None en la lista
 while True:
@@ -20,7 +20,7 @@ while True:
 salto = int(input('Ahora diga el salto para cifrarlo usando el metodo de cifrado cesar: ')) - 1
 
 # Conversion de cifrado posicional a texto legible usando el salto ingresado por el usuario para aplicar el cifrado Cesar
-lista_cesar = cf.cifrado_cesar(salto, lista)
+lista_cesar = ccf.Funciones.cifrado_cesar(salto, lista)
 print(f'El cifrado cesar de la palabra {palabra} con un salto de {salto+1} es:', end=' ')
 for i in lista_cesar:
     print(i, end=' ')
